@@ -1,0 +1,80 @@
+﻿
+    #egesz
+
+{
+    border: 5px solid black;
+    margin: 10px;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: orange;
+}
+
+span {
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+    color: green
+}
+
+#szoveg1 {
+    border: 2px dashed;
+    border-radius: 30px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#szoveg2 {
+    border: 2px solid;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+a {
+    padding: 8px;
+    border-radius: 30px;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}
+
+    a:hover {
+        background-color: green;
+    }
+
+#listak {
+    margin: 20px;
+    background-color: lightgrey;
+    border-radius: 30px;
+    border: 2px solid orange;
+    padding: 10px;
+}
+
+.kaja {
+    background-color: white;
+    border-radius: 30px;
+}
+
+.konyv {
+    background-color: white;
+    border-radius: 30px;
+}
+
+.kateg1 {
+    Font-weight: bold;
+}
+
+.kateg2 {
+    font-weight: bold;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
