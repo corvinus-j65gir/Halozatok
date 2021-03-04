@@ -1,0 +1,127 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: bold;
+    text-align: center;
+    border: 5px solid black;
+    margin: 10px;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+#header {
+    background-color: crimson;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+#listak {
+    background-color: darkorange;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+.kaja {
+    background-color: white;
+    border-radius: 30px;
+    padding: 18px;
+}
+
+.konyv {
+    background-color: white;
+    border-radius: 30px;
+    padding: 18px;
+}
+
+#article {
+    background-color: gold;
+    text-align: left;
+    padding: 20px;
+}
+
+span {
+    font-size: 22px;
+    font-style: italic;
+    color: darkblue
+}
+
+#szoveg1 {
+    border: 2px dashed;
+    border-radius: 30px;
+    text-align: left;
+    font-weight: bold;
+    padding: 10px;
+}
+
+h3 {
+    color: black;
+    text-align: center;    
+}
+
+#szoveg2 {
+    border: 2px solid;
+    border-radius: 30px;
+    padding: 10px;
+    text-align: left;
+    font-style: italic;
+}
+
+#aside {
+    background-color: white;
+    padding: 20px;
+    display: block;
+    margin: auto;
+}
+
+#footer {
+    background-color: mediumslateblue;
+    padding: 20px;
+}
+#footer a {
+    text-decoration: none;
+    color: white;
+    flex: 1 1 auto;
+}
+
+a:hover {
+    background-color:lightslategrey ;
+}
+
+#listak {
+    display: flex;
+}
+#listak p {
+    text-decoration: none;
+    color: white;
+    flex: 1 1 auto;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 1500px;
+    }
+
+    #main {
+        display: flex;
+    }
+
+    #listak, #header {
+        order: -1;
+    }
+
+    #article {
+        flex: 1 1 80%;
+    }
+
+    #aside {
+        flex: 1 1 20%;
+    }
+}
