@@ -1,4 +1,8 @@
-﻿html, body {
+﻿* {
+    box-sizing: border-box;
+}
+
+html, body {
     height: 100%;
     background-color: lightskyblue;
 }
@@ -53,6 +57,7 @@ div {
     overflow: hidden;
     flex-shrink: 0;
     flex-shrink: 0;
+    max-width: 50%
 }
 
 .gomb {
@@ -85,4 +90,26 @@ div {
 
 .rossz:hover {
     background-color: crimson;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 1500px;
+    }
+
+    #középső {
+        display: flex;
+    }
+
+    #válaszok{
+        flex: 1 1 30%;
+        order: -1
+    }
+
+    #kép{
+        flex: 1 1 70%;
+    }
 }
