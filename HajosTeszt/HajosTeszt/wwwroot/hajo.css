@@ -28,7 +28,7 @@ div {
 
 #középső {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-grow: 1;
     border-radius: 15px;
 }
@@ -55,9 +55,9 @@ div {
 
 #kép {
     overflow: hidden;
+    flex-grow: 0;
     flex-shrink: 0;
-    flex-shrink: 0;
-    max-width: 50%
+    display: block;
 }
 
 .gomb {
@@ -104,12 +104,11 @@ div {
         display: flex;
     }
 
-    #válaszok{
-        flex: 1 1 30%;
+    #válaszok, kérdés_szöveg{
         order: -1
     }
 
     #kép{
-        flex: 1 1 70%;
+       
     }
 }
