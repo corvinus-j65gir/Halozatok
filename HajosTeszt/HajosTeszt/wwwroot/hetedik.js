@@ -1,6 +1,4 @@
-﻿var jóVálasz;
-var questionId = 4;
-var hotlist = [];
+﻿var hotlist = [];
 var questionsInHotList = 3;
 var displayedQuestion;
 var numberOfQuestions;
