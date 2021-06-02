@@ -8,28 +8,36 @@ using System.Threading.Tasks;
 
 namespace HajosTeszt.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/beadando")]
     [ApiController]
     public class BeadandoController : ControllerBase
     {
-        // GET: api/<BeadandoController>
+        // GET: api/Diaks
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<BeadandoM.Diak> Get()
         {
-            return new string[] { "value1", "value2" };
+            BeadandoM.BeadandoContext context = new BeadandoM.BeadandoContext();
+            return context.Diaks.ToList();
         }
 
-        // GET api/<BeadandoController>/5
+        // GET api/Diaks/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public BeadandoM.Diak Get(int id)
         {
-            return "value";
+            BeadandoM.BeadandoContext context = new BeadandoM.BeadandoContext();
+            var keresettDiak = (from x in context.Diaks
+                                where x.DiakAz == id
+                                select x).FirstOrDefault();
+            return keresettDiak;
         }
 
-        // POST api/<BeadandoController>
+        // POST api/Diaks
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] BeadandoM.Diak ujDiak)
         {
+            BeadandoM.BeadandoContext context = new BeadandoM.BeadandoContext();
+            context.Diaks.Add(ujDiak);
+            context.SaveChanges();
         }
 
         // PUT api/<BeadandoController>/5
@@ -38,10 +46,16 @@ namespace HajosTeszt.Controllers
         {
         }
 
-        // DELETE api/<BeadandoController>/5
+        // DELETE api/Diaks/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            BeadandoM.BeadandoContext context = new BeadandoM.BeadandoContext();
+            var torlendoDiak = (from x in context.Diaks
+                                where x.DiakAz == id
+                                select x).FirstOrDefault();
+            context.Remove(torlendoDiak);
+            context.SaveChanges();
         }
     }
 }
